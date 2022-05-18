@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="12dp"
@@ -8,24 +11,38 @@
     android:layout_marginBottom="5dp"
     android:background="@color/white"
     android:orientation="vertical"
+    card_view:cardCornerRadius="4dp"
 
     >
-
-    <TextView
-        android:id="@+id/txtFilmTitle"
-        android:layout_width="352dp"
-        android:layout_height="wrap_content"
+    <!-- A CardView that contains a TextView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:paddingStart="5dp"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingEnd="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="5dp"
-        android:text="Vingadores End Game"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
         android:textAlignment="center"
-        android:textColor="#77193e"
-        android:textSize="24sp" />
+        card_view:cardCornerRadius="20dp">
+
+        <TextView
+            android:id="@+id/txtFilmTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:text="Vingadores End Game"
+            android:textAlignment="center"
+            android:textColor="#77193e"
+            android:textSize="24sp" />
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:contentDescription="@+id/txtFilmTitle"
+        android:src="@android:drawable/ic_input_add"
+        />
 
 </LinearLayout>

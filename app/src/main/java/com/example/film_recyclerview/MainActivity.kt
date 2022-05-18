@@ -54,4 +54,5 @@ class MainActivity : AppCompatActivity() {
         listFilms.add(film8)
 
     }
+
 }
